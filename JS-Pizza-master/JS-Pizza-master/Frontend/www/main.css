@@ -1,0 +1,191 @@
+.pizza-card img {
+	/* max-width: 250px; */
+}
+
+.pizza-card h3 {
+	color: blue;
+	background-color: #e5e5ff;
+}
+
+body {
+	background-color: beige !important;
+	min-width: 550px;
+}
+
+#nav-top {
+	border-bottom: 1px solid white;
+	height: 24px;
+	width: 90%;
+	float: right;
+}
+
+.nav-txt {
+	color: #9d9d9d;
+}
+
+#nav-time {
+	font-size: 10px;
+	margin-left: 20px;
+}
+
+#nav-deliv {
+	font-size: 12px;
+	margin-left: 20px;
+}
+
+#nav-button {
+	padding-top: 0px;
+	background-color: orange;
+	float: right;
+	height: 23px;
+	box-sizing: border-box;
+}
+
+#nav-button-txt {
+	vertical-align: middle;
+}
+
+#nav-bottom {
+	height: 25px;
+	width: 90%;
+	float: right;
+}
+
+#nav-bottom-pizza {
+	color: white;
+	vertical-align: middle;
+}
+
+#cart {
+	float: right;
+	height: 100vh;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 25vw;
+	background-color: white;
+	min-width: 250px;
+	z-index: 5;
+}
+
+#cart-1 {
+	padding: 15px 10px 15px 10px;
+	box-sizing: border-box;
+	font-weight: bold;
+	height: 10vh;
+}
+
+#cart-1-left, #cart-1-span, #cart-1-right {
+	vertical-align: middle;
+}
+
+#cart-1-span {
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	text-align: center;
+	border-radius: 50%;
+	color: white;
+	margin-left: 3px;
+	background-color: orange;
+	font-size: 10px;
+}
+
+#cart-1-right {
+	float: right;
+	font-size: 10px;
+	color: grey;
+	padding: 3px;
+}
+
+#cart-2 {
+	height: 70vh;
+	background-color: lightgrey;
+	border-bottom: 1px solid grey;
+	overflow: auto;
+}
+
+.bought {
+	border-bottom: 1px solid grey;
+	/* height: 100px; */
+	overflow: auto;
+}
+
+.bought-left {
+	width: 70%;
+	float: left;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.cart-2-pizza-name {
+	color: orange;
+	font-size: 15px;
+}
+
+.bought-right {
+	padding-top: 5px;
+	width: 30%;
+	float: right;
+	box-sizing: border-box;
+}
+
+.crop {
+	width: 35px;
+	height: 70px;
+	overflow: hidden;
+	float: right;
+}
+
+.crop img {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+}
+
+#cart-3 {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	padding: 7px;
+	box-sizing: border-box;
+	height: 20vh;
+	font-weight: bold;
+	width: 100%;
+}
+
+#cart-3-price {
+	float: right;
+}
+
+#cart-3-button {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: 30%;
+	width: 80%;
+	background-color: orange;
+}
+
+@media(max-width: 991px) {
+	#cart {
+		width: 33vw;
+	}
+	
+	#nav-deliv {
+		display: none;
+	}
+}
+
+@media(max-width: 767px) {
+	#cart {
+		width: 41vw;
+	}
+	
+	#nav-time {
+		display: none;
+	}
+}

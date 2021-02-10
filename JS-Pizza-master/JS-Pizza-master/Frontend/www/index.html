@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="main.css"/> -->
+
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- LESS основний файл -->
+    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less"/>
+    <!-- LESS JavaScript компілятор -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse col-md-9 col-sm-8 col-xs-12">
+    <div class="container-fluid">
+        <div class="navbar-header" id="nav-head-pizza">
+            <!-- <a class="navbar-brand" href="#">Brand</a> -->
+            <img src="assets/images/discount.svg" id="nav-pizza-kma">
+            <div id="nav-head-txt">
+                <span id="nav-head-span-1"> PIZZA </span>
+                <br>
+                <span id="nav-head-span-1"> КМА </span></div>
+            <!-- <div id="nav-head-pizza"></div> -->
+        </div>
+        <div id="nav-top">
+		<span class="nav-txt">
+		  (044) 222 5 222
+		</span>
+            <span class="nav-txt" id="nav-time">
+		  24 години/ 7 днів на тиждень
+		</span>
+            <span class="nav-txt" id="nav-deliv">
+			Безкоштовна доставка піцци
+		</span>
+            <button class="btn btn-primary" id="nav-button"><span id="nav-button-txt"> Ввійти </span></button>
+        </div>
+        <div id="nav-bottom"><span id="nav-bottom-pizza"> Піцца </span></div>
+        <!-- <p class="navbar-text">
+          p.navbar-text
+          <a href="#" class="navbar-link">a.navbar-link</a>
+        </p> -->
+
+        <!-- Add the .navbar-btn class to <button> elements not residing
+        in a <form> to vertically center them in the navbar. -->
+        <!-- <button class="btn btn-default navbar-btn" type="button">.navbar-btn</button>
+        <button class="btn btn-default navbar-btn btn-sm" type="button">.btn-sm</button>
+        <button class="btn btn-default navbar-btn btn-xs" type="button">.btn-xs</button> -->
+    </div>
+</nav>
+<div id="img-discount-div"><span id="dicsount-span">Цього тижня на все<br>-20%</span></div>
+<div id="cart">
+    <div id="cart-1"><span id="cart-1-left"> Замовлення </span> <span id="cart-1-span"> 3 </span> <span
+            id="cart-1-right"> Очистити замовлення </span></div>
+    <div id="cart-2">
+        <div class="bought">
+            <div class="bought-left">
+                <span class="cart-2-pizza-name"> BBQ (Мала) </span>
+                <div>Ціна: 556грн.</div>
+                <div>
+                    <button class="btn btn-danger minus">-</button>
+                    <span class="label label-default"> 4 </span>
+                    <button class="btn btn-success plus">+</button>
+                </div>
+            </div>
+            <div class="bought-right">
+                <div class="crop"><img src="assets/images/pizza_2.jpg"></div>
+            </div>
+        </div>
+        <div class="bought">
+            <div class="bought-left">
+                <span class="cart-2-pizza-name"> Россо Густо (Мала) </span>
+                <div>Ціна: 189грн.</div>
+                <div>
+                    <button class="btn btn-danger minus">-</button>
+                    <span class="label label-default"> 1 </span>
+                    <button class="btn btn-success plus">+</button>
+                </div>
+            </div>
+            <div class="bought-right">
+                <div class="crop"><img src="assets/images/pizza_4.jpg"></div>
+            </div>
+        </div>
+        <div class="bought">
+            <div class="bought-left">
+                <span class="cart-2-pizza-name"> Міксовий поло (Велика) </span>
+                <div>Ціна: 179грн.</div>
+                <div>
+                    <button class="btn btn-danger minus">-</button>
+                    <span class="label label-default"> 1 </span>
+                    <button class="btn btn-success plus">+</button>
+                </div>
+            </div>
+            <div class="bought-right">
+                <div class="crop"><img src="assets/images/pizza_1.jpg"></div>
+            </div>
+        </div>
+    </div>
+    <div id="cart-3"> Сума замовлення <span id="cart-3-price"> 924 грн. </span>
+        <button class="btn btn-primary" id="cart-3-button"> Замовити</button>
+    </div>
+</div>
+<div class="container col-md-9 col-sm-8 col-xs-12">
+    <div class="row" id="pizza_list">
+        <div class="col-sm-6 col-md-4 col-xs-6">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_1.jpg">
+
+                <div class="caption"><h3>Міксовий поло</h3>
+
+                    <p>Вітчина, куриця копчена, сир моцарелла, ананаси, кукурудза, петрушка, соус томатний</p>
+
+                    <p>
+                        <a href="#" class="btn btn-primary">Купити</a>
+                        <a href="#" class="btn btn-default">Купити</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-xs-6">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_2.jpg">
+
+                <div class="caption"><h3>BBQ</h3>
+
+                    <p>Мисливські ковбаски, ковбаски папероні, шинка, сир домашній, шампінйони, петрушка, оливки</p>
+
+                    <p>
+                        <a href="#" class="btn btn-primary">Купити</a>
+                        <a href="#" class="btn btn-default">Купити</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-xs-6">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_3.jpg">
+
+                <div class="caption"><h3>Маргарита</h3>
+
+                    <p>Сир моцарелла, сир домашній, помідори, базилік, оливкова олія, соус томатний</p>
+
+                    <p>
+                        <a href="#" class="btn btn-primary">Купити</a>
+                        <a href="#" class="btn btn-default">Купити</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!--Bootsrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--Own JavaScript -->
+<!-- <script type="text/javascript"  src="assets/js/main.js"> </script> -->
+</body>
+</html>
