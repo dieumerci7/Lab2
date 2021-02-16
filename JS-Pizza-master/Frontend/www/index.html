@@ -25,7 +25,7 @@
             <div id="nav-head-txt">
                 <span id="nav-head-span-1"> PIZZA </span>
                 <br>
-                <span id="nav-head-span-1"> КМА </span></div>
+                <span id="nav-head-span-2"> КМА </span></div>
             <!-- <div id="nav-head-pizza"></div> -->
         </div>
         <div id="nav-top">
@@ -38,9 +38,14 @@
             <span class="nav-txt" id="nav-deliv">
 			Безкоштовна доставка піцци
 		</span>
-            <button class="btn btn-primary" id="nav-button"><span id="nav-button-txt"> Ввійти </span></button>
+            <button class="btn btn-primary nav-button" id="nav-button-enter"><span
+                    class="nav-button-txt"> Ввійти </span></button>
         </div>
-        <div id="nav-bottom"><span id="nav-bottom-pizza"> Піцца </span></div>
+        <div id="nav-bottom">
+            <span id="nav-bottom-pizza"> Піцца </span>
+            <button class="btn btn-primary nav-button" id="nav-button-cart"><span class="nav-button-txt">
+            Показати кошик</span></button>
+        </div>
         <!-- <p class="navbar-text">
           p.navbar-text
           <a href="#" class="navbar-link">a.navbar-link</a>
@@ -54,10 +59,10 @@
     </div>
 </nav>
 <div id="img-discount-div"><span id="dicsount-span">Цього тижня на все<br>-20%</span></div>
-<div id="cart">
+<div id="cart-holder">
     <div id="cart-1"><span id="cart-1-left"> Замовлення </span> <span id="cart-1-span"> 3 </span> <span
             id="cart-1-right"> Очистити замовлення </span></div>
-    <div id="cart-2">
+    <div id="cart">
         <div class="bought">
             <div class="bought-left">
                 <span class="cart-2-pizza-name"> BBQ (Мала) </span>
@@ -105,7 +110,16 @@
         <button class="btn btn-primary" id="cart-3-button"> Замовити</button>
     </div>
 </div>
+
+
 <div class="container col-md-9 col-sm-8 col-xs-12">
+    <div class="row" id="filter-div">
+        <a href="#" class="btn btn-primary" id="filter-all">Усі</a>
+        <a href="#" class="btn btn-primary" id="filter-meat">М'ясна</a>
+        <a href="#" class="btn btn-primary" id="filter-pineapple">Ананаси</a>
+        <a href="#" class="btn btn-primary" id="filter-mushroom">Гриби</a>
+        <a href="#" class="btn btn-primary" id="filter-ocean">Морепродукти</a>
+    </div>
     <div class="row" id="pizza_list">
         <div class="col-sm-6 col-md-4 col-xs-6">
             <div class="thumbnail pizza-card">
@@ -164,6 +178,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <!--Own JavaScript -->
-<!-- <script type="text/javascript"  src="assets/js/main.js"> </script> -->
+<script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>
