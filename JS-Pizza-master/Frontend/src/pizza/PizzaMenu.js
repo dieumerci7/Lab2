@@ -39,12 +39,34 @@ function filterPizza(filter) {
         //Якщо піка відповідає фільтру
         //pizza_shown.push(pizza);
 
-        //TODO: зробити фільтри
+        if (filter in pizza.content) {
+            pizza_shown.push(pizza);
+        }
     });
 
     //Показати відфільтровані піци
     showPizzaList(pizza_shown);
 }
+
+$("#filter-all").click(function(){
+    showPizzaList(Pizza_List);
+});
+
+$("#filter-meat").click(function(){
+    filterPizza('meat');
+});
+
+$("#filter-pineapple").click(function(){
+    filterPizza('pineapple');
+});
+
+$("#filter-mushroom").click(function(){
+    filterPizza('mushroom');
+});
+
+$("#filter-ocean").click(function(){
+    filterPizza('ocean');
+});
 
 function initialiseMenu() {
     //Показуємо усі піци
