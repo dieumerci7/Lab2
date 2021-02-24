@@ -13,6 +13,13 @@
   <component name="CompilerWorkspaceConfiguration">
     <option name="CLEAR_OUTPUT_DIRECTORY" value="false" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="FindBugs-IDEA-Workspace">
     <analyzeAfterCompile>true</analyzeAfterCompile>
     <toolWindowToFront>false</toolWindowToFront>
@@ -32,6 +39,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -64,7 +72,13 @@
       <workItem from="1613491237083" duration="1298000" />
       <workItem from="1613735113400" duration="766000" />
       <workItem from="1613808212970" duration="9651000" />
-      <workItem from="1613832069572" duration="1027000" />
+      <workItem from="1613832069572" duration="8687000" />
+      <workItem from="1613905947791" duration="3364000" />
+      <workItem from="1613917450682" duration="9083000" />
+      <workItem from="1613990145433" duration="4254000" />
+      <workItem from="1614094134690" duration="5188000" />
+      <workItem from="1614165835244" duration="2620000" />
+      <workItem from="1614178212516" duration="3413000" />
     </task>
     <servers />
   </component>

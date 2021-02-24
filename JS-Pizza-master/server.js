@@ -1,5 +1,2 @@
-const express = require('express');
-const app = express();
-
-app.use(express.static('./'));
-app.listen(3000, () => console.log('Example app listening on port 3000'));
+var main = require('./Backend/main');
+main.startServer(5050);

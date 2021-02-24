@@ -1,0 +1,102 @@
+<% include common/header.ejs %>
+
+<div id="cart-holder">
+    <div id="cart-1"><span id="cart-1-left"> Замовлення </span> <span id="cart-1-span"> 3 </span> <span
+                id="cart-1-right"> Очистити замовлення </span></div>
+    <div id="cart">
+        <div class="bought">
+            <div class="bought-left">
+                <span class="cart-2-pizza-name"> BBQ (Мала) </span>
+                <div>Ціна: 556грн.</div>
+                <div>
+                    <button class="btn btn-danger minus">-</button>
+                    <span class="label label-default"> 4 </span>
+                    <button class="btn btn-success plus">+</button>
+                </div>
+            </div>
+            <div class="bought-right">
+                <div class="crop"><img src="assets/images/pizza_2.jpg"></div>
+            </div>
+        </div>
+        <div class="bought">
+            <div class="bought-left">
+                <span class="cart-2-pizza-name"> Россо Густо (Мала) </span>
+                <div>Ціна: 189грн.</div>
+                <div>
+                    <button class="btn btn-danger minus">-</button>
+                    <span class="label label-default"> 1 </span>
+                    <button class="btn btn-success plus">+</button>
+                </div>
+            </div>
+            <div class="bought-right">
+                <div class="crop"><img src="assets/images/pizza_4.jpg"></div>
+            </div>
+        </div>
+        <div class="bought">
+            <div class="bought-left">
+                <span class="cart-2-pizza-name"> Міксовий поло (Велика) </span>
+                <div>Ціна: 179грн.</div>
+                <div>
+                    <button class="btn btn-danger minus">-</button>
+                    <span class="label label-default"> 1 </span>
+                    <button class="btn btn-success plus">+</button>
+                </div>
+            </div>
+            <div class="bought-right">
+                <div class="crop"><img src="assets/images/pizza_1.jpg"></div>
+            </div>
+        </div>
+    </div>
+    <div id="cart-3"> Сума замовлення <span id="cart-3-price"> 924 грн. </span>
+        <a href="http://localhost:5050">
+            <button class="btn btn-primary" id="cart-3-button-order">Редаґувати замовлення</button>
+        </a>
+    </div>
+</div>
+
+<div class="container col-md-9 col-sm-8 col-xs-12">
+    <br><br>
+    <h3>1. Контактні дані</h3>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-2 control-label" id="name-label">Ім'я</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" placeholder="Ім'я Прізвище">
+                <div id="invalid-name">
+                    Введіть тільки власне ім'я, без цифр
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" id="phone-label">Телефон</label>
+            <div class="col-sm-10">
+                <input class="form-control" id="phone" placeholder="+380991234567">
+                <div id="invalid-phone">
+                    Введіть нумер телефона в форматі +380 або почніть із 0
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" id="address-label">Адреса</label>
+            <div class="col-sm-10">
+                <input class="form-control" id="address" placeholder="Київ, вул. Спаська, 2">
+                <div id="invalid-address">
+                    Введіть, будь ласка, адресу
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div id="suppl-div">
+        <br>
+        <span id="info-span">Інформація про замовлення</span><br><br>
+        <b>Приблизний час доставки:</b> невідомий<br>
+        <b>Адреса доставки:</b> невідома<br><br>
+    </div><br>
+    <a class="btn btn-primary btn-lg" id="further-btn" href="#" role="button">
+        Далі
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+
+<% include common/footer.ejs %>

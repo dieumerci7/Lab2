@@ -83,7 +83,7 @@ function initialiseCart() {
 
     updateCart();
 
-    console.log(Cart);
+    // console.log(Cart);
 }
 
 function getPizzaInCart() {
