@@ -110,7 +110,8 @@ function updateCart() {
         // total_price += Cart[j].quantity * Cart[j].pizza.big_size.price;
     }
     $("#cart-1-span").text(sum);
-    $("#cart-3-price").text(total_price + " грн.");
+    $("#price").text(total_price);
+    $("#price").trigger("change");
 
     //Онволення однієї піци
     function showOnePizzaInCart(cart_item) {

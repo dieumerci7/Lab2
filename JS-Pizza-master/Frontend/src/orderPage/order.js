@@ -1,6 +1,21 @@
 var api = require('../API');
+var my_map = require('./myMap');
+let liq_pay = require('./liqPay');
+let pizza_cart = require('../pizza/PizzaCart');
+
+$("#price").change(function () {
+    console.log(JSON.parse($("#price").text()));
+    if (JSON.parse($("#price").text()) === 0) {
+        $("#further-btn").prop('disabled', true);
+        console.log("Disabled = true");
+    } else {
+        $("#further-btn").prop('disabled', false);
+        console.log("Disabled = false");
+    }
+})
 
 $("#further-btn").click(function(){
+
     var typedName = $('#name').val();
     var everythingValid = true;
     var invalid = false;
@@ -48,26 +63,58 @@ $("#further-btn").click(function(){
     }
 
     var typedAddress = $('#address').val();
-    if (typedAddress.length === 0) {
+    /* invalid = false;
+    if ($("#delivery-address").text() === "невідома") {
+        invalid = true;
+    }
+    if (invalid) {
         $('#invalid-address').show();
         $('#address-label').css('color', 'red');
         everythingValid = false;
     } else {
         $('#invalid-address').hide();
         $('#address-label').css('color', 'green');
-    }
+    } */
 
-    if (everythingValid) {
-        var order_info = {
-            name: typedName,
-            phone: typedPhone,
-            address: typedAddress
-        };
-        api.createOrder(order_info, function (err, data) {
-            if (err) {
-                console.log("An error occurred!!!");
-                return;
-            }
-        });
-    }
+    my_map.geocodeAddress($("#address").val(), function (err, coordinates) {
+        if (!err) {
+            $('#invalid-address').hide();
+            $('#address-label').css('color', 'green');
+            my_map.calculateRoute(my_map.point, coordinates, function (err, time) {
+                if (!err) {
+                    if (everythingValid) {
+                        let price = $("#price").text();
+                        let cart = pizza_cart.getPizzaInCart();
+                        let description = "Замовлення піцци: " + typedName + "\nАдреса доставки: " + $("#delivery-address").text() + "\nТелефон: " + typedPhone + "\nЗамовлення:\n";
+                        for (let j = 0; j < cart.length; j++) {
+                            description += "- " + cart[j].quantity + "шт. [" + (cart[j].size === "big_size" ? "Велика" : "Мала") + "] " + cart[j].pizza.title + ";\n"
+                        }
+                        description += "\nРазом " + price + "грн";
+                        var order_info = {
+                            name: typedName,
+                            phone: typedPhone,
+                            address: typedAddress,
+                            amount: JSON.parse(price),
+                            description: description
+                        };
+                        api.createOrder(order_info, function (err, data) {
+                            if (err) {
+                                console.log("An error occurred!!!");
+                                return;
+                            } else {
+                                console.log(JSON.stringify(data));
+                                liq_pay.initialize(data.data, data.signature);
+                            }
+                        });
+                    }
+                } else {
+                    $('#invalid-address').show();
+                    $('#address-label').css('color', 'red');
+                }
+            })
+        } else {
+            $('#invalid-address').show();
+            $('#address-label').css('color', 'red');
+        }
+    })
 });

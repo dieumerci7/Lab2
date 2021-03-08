@@ -8,6 +8,7 @@ $(function(){
     var PizzaCart = require('./pizza/PizzaCart');
     var Pizza_List = require('./Pizza_List');
     var ValidateCheck = require('./orderPage/order');
+    var my_map = require('./orderPage/myMap');
 
     PizzaCart.initialiseCart();
     PizzaMenu.initialiseMenu();
